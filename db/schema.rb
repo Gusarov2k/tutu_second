@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20181119114302) do
+ActiveRecord::Schema.define(version: 20181119141502) do
 
   create_table "railway_station_routes", force: :cascade do |t|
     t.integer "railway_station_id"
@@ -26,6 +26,11 @@ ActiveRecord::Schema.define(version: 20181119114302) do
 
   create_table "routes", force: :cascade do |t|
     t.string "name"
+  end
+
+  create_table "train_routes", force: :cascade do |t|
+    t.integer "train_id"
+    t.integer "route_id"
   end
 
   create_table "trains", force: :cascade do |t|
