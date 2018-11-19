@@ -15,6 +15,15 @@
     <%= f.label :name %><br>
     <%= f.text_field :name %>
   </div>
+    <div>
+      <%=f.fields_for :trains do |tr|%>
+        
+
+
+      <%end%>
+    </div>
+    
+
   <div class="actions">
     <%= f.submit %>
   </div>

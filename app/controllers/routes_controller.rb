@@ -11,6 +11,7 @@ class RoutesController < ApplicationController
 
   def new
     @route = Route.new
+    2.times { @route.build_train }
   end
 
   def create
@@ -46,7 +47,7 @@ class RoutesController < ApplicationController
   end
 
   def route_params
-    params.require(:route).permit(:name)
+    params.require(:route).permit(:name, train_attributes: [:id, :number])
   end
 
 end
