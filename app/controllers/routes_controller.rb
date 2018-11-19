@@ -42,7 +42,7 @@ class RoutesController < ApplicationController
   private
 
   def set_route
-    @train = Route.find(params[:id])
+    @route = Route.find(params[:id])
   end
 
   def route_params
