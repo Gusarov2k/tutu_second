@@ -3,4 +3,5 @@ class Train < ActiveRecord::Base
 
   belongs_to :railway_station
 
+  has_one   :route
 end
