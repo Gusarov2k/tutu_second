@@ -47,6 +47,5 @@ class TrainsController < ApplicationController
 
   def train_params
     params.require(:train).permit(:number)
-    
   end
 end
