@@ -37,11 +37,6 @@ ActiveRecord::Schema.define(version: 20181119145339) do
     t.datetime "updated_at"
   end
 
-  create_table "train_routes", force: :cascade do |t|
-    t.integer "train_id"
-    t.integer "route_id"
-  end
-
   create_table "trains", force: :cascade do |t|
     t.string   "number"
     t.datetime "created_at"
