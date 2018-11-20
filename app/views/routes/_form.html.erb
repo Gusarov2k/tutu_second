@@ -11,9 +11,14 @@
     </div>
   <% end %>
 
+  
+  </div>
+
   <div class="field">
-    <%= collection_select(:railway_stations, :railway_id, RailwayStation.all, :id, :title) %>
-    <%= collection_select(:railway_stations, :railway_id, RailwayStation.all, :id, :title) %>
+    <%= f.label :railway_station_ids, t('.route_stations') %><br>
+    <%= f.collection_select :railway_station_ids,
+                            RailwayStation.all, :id, :title, {},
+                            { multiple: true, class: 'form-control' } %>
     <%= f.label :name %><br>
     <%= f.text_field :name %>
   </div>

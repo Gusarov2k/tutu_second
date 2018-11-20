@@ -15,6 +15,12 @@
     <%= f.label :number %><br>
     <%= f.text_field :number %>
   </div>
+
+  <div class="field">
+    <%= f.label :current_station %><br>
+    <%= f.collection_select(:current_station, RailwayStation.all, :id, :title) %>
+  </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>
