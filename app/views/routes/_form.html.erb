@@ -22,12 +22,12 @@
     <%= f.label :name %><br>
     <%= f.text_field :name %>
   </div>
-    <div>
+    <!-- <div>
       <%=f.fields_for :train do |tr|%>
         <%= tr.label :number %><br>
         <%= tr.collection_select(:id, Train.all, :id, :number) %>
       <% end %>
-    </div>
+    </div> -->
     
 
   <div class="actions">

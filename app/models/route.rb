@@ -10,4 +10,10 @@ class Route < ActiveRecord::Base
 
   accepts_nested_attributes_for :train
   
+  before_create :set_name
+  private
+
+  def set_name
+    self.name = "#{railway_stations.first.title} - #{railway_stations.first.title}"
+  end
 end
