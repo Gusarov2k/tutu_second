@@ -9,8 +9,9 @@ class Route < ActiveRecord::Base
   has_many      :ticets
 
   accepts_nested_attributes_for :train
-  
-  before_create :set_name
+
+  before_validation :set_name
+
   private
 
   def set_name

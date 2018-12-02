@@ -11,43 +11,41 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20181119145339) do
-
-  create_table "railway_station_routes", force: :cascade do |t|
-    t.integer "railway_station_id"
-    t.integer "route_id"
+ActiveRecord::Schema.define(version: 20_181_119_145_339) do
+  create_table 'railway_station_routes', force: :cascade do |t|
+    t.integer 'railway_station_id'
+    t.integer 'route_id'
   end
 
-  create_table "railway_stations", force: :cascade do |t|
-    t.string   "title"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+  create_table 'railway_stations', force: :cascade do |t|
+    t.string   'title'
+    t.datetime 'created_at', null: false
+    t.datetime 'updated_at', null: false
   end
 
-  create_table "routes", force: :cascade do |t|
-    t.string  "name"
-    t.integer "train_id"
+  create_table 'routes', force: :cascade do |t|
+    t.string  'name'
+    t.integer 'train_id'
   end
 
-  create_table "ticets", force: :cascade do |t|
-    t.integer  "train_id"
-    t.integer  "route_id"
-    t.integer  "user_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+  create_table 'ticets', force: :cascade do |t|
+    t.integer  'train_id'
+    t.integer  'route_id'
+    t.integer  'user_id'
+    t.datetime 'created_at'
+    t.datetime 'updated_at'
   end
 
-  create_table "train_routes", force: :cascade do |t|
-    t.integer "train_id"
-    t.integer "route_id"
+  create_table 'train_routes', force: :cascade do |t|
+    t.integer 'train_id'
+    t.integer 'route_id'
   end
 
-  create_table "trains", force: :cascade do |t|
-    t.string   "number"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.integer  "railway_station_id"
-    t.integer  "ticet_id"
+  create_table 'trains', force: :cascade do |t|
+    t.string   'number'
+    t.datetime 'created_at'
+    t.datetime 'updated_at'
+    t.integer  'railway_station_id'
+    t.integer  'ticet_id'
   end
-
 end

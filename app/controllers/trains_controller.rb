@@ -1,7 +1,6 @@
 class TrainsController < ApplicationController
   before_action :set_train, only: [:show, :edit, :update, :destroy]
 
-
   def index
     @trains = Train.all
   end
@@ -41,7 +40,7 @@ class TrainsController < ApplicationController
 
   private
 
-   def set_train
+  def set_train
     @train = Train.find(params[:id])
   end
 
